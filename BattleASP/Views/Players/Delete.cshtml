@@ -1,0 +1,88 @@
+﻿@model BattleASP.Models.Player
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Player</h4>
+    <hr />
+	<dl class="dl-horizontal">
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Name)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Name)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Level)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Level)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Hp)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Hp)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Mp)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Mp)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Str)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Str)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Int)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Int)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Exp)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Exp)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Money)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Money)
+		</dd>
+	</dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

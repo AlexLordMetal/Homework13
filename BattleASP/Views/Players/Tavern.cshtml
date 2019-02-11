@@ -1,0 +1,69 @@
+﻿@model BattleASP.Models.Player
+
+@{
+	ViewBag.Title = "Tavern";
+}
+
+<h2>Tavern</h2>
+
+<h3>Welcome to the tavern, @Html.DisplayFor(m => Model.Name)</h3>
+<h4>Your stats:</h4>
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Level)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Hp)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Mp)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Str)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Int)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Exp)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Money)
+		</th>
+		<th></th>
+	</tr>
+
+	<tr>
+		<td>
+			@Html.DisplayFor(model => model.Level)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.Hp)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.Mp)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.Str)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.Int)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.Exp)
+		</td>
+		<td>
+			@Html.DisplayFor(model => model.Money)
+		</td>
+	</tr>
+
+</table>
+<hr />
+<h4>What would you like to do</h4>
+<p>
+	@Html.ActionLink("Find an Adventure", "Adventures", new { id = Model.Id }) |
+	@Html.ActionLink("Go to Shop", "Shop", new { id = Model.Id }) |
+	@Html.ActionLink("Change your Weapon", "Weapon", new { id = Model.Id }) |
+	@Html.ActionLink("End Game", "Index")
+</p>
