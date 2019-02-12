@@ -70,7 +70,22 @@ namespace BattleASP.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Tavern(int? id)
+        public ActionResult StartGame(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Player player = db.Players.Find(id);
+            if (player == null)
+            {
+                return HttpNotFound();
+            }
+            Session["playerId"] = id;
+            return Redirect("/Game/Tavern");
+        }
+
+        public ActionResult Adventure(int? id)
         {
             if (id == null)
             {

@@ -1,0 +1,22 @@
+﻿@model List<string>
+
+@{
+    ViewBag.Title = "YouLose";
+}
+
+<h2>Battle Report</h2>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <p>
+            @Html.Display(item)
+        </p>
+    }
+</div>
+
+<h2>You Lose!</h2>
+
+<p>
+    @Html.ActionLink("Back to List of Players", "Index", "Players")
+</p>

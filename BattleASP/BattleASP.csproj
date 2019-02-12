@@ -132,6 +132,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -139,8 +140,10 @@
     </Compile>
     <Compile Include="Models\BaseClass.cs" />
     <Compile Include="Models\Creature.cs" />
+    <Compile Include="Models\GameBattleModel.cs" />
     <Compile Include="Models\GameDbContext.cs" />
     <Compile Include="Models\GameDbInitializer.cs" />
+    <Compile Include="Models\GameAdventureModel.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\JsonParser.cs" />
     <Compile Include="Models\Monster.cs" />
@@ -196,7 +199,11 @@
     <Content Include="Views\Players\Create.cshtml" />
     <Content Include="Views\Players\Delete.cshtml" />
     <Content Include="Views\Players\Index.cshtml" />
-    <Content Include="Views\Players\Tavern.cshtml" />
+    <Content Include="Views\Game\Tavern.cshtml" />
+    <Content Include="Views\Game\Adventure.cshtml" />
+    <Content Include="Views\Game\_GameLayout.cshtml" />
+    <Content Include="Views\Game\YouLose.cshtml" />
+    <Content Include="Views\Game\YouWon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

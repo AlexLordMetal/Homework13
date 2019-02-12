@@ -12,9 +12,9 @@ namespace BattleASP.Models
         {
             var random = new Random();
 
-            var items = JsonParser.Items("Items.json");
-            var weapons = JsonParser.Weapons("Weapons.json");
-            var monsters = JsonParser.Monsters("Monsters.json");
+            var items = JsonParser.Items("~/Models/Items.json");
+            var weapons = JsonParser.Weapons("~/Models/Weapons.json");
+            var monsters = JsonParser.Monsters("~/Models/Monsters.json");
 
             foreach (var monster in monsters)
             {

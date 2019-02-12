@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Hosting;
 
 namespace BattleASP.Models
 {
@@ -11,6 +12,7 @@ namespace BattleASP.Models
     {
         public static List<Item> Items(string file)
         {
+            file = HostingEnvironment.MapPath(file);
             var items = new List<Item>();
             if (File.Exists(file))
             {
@@ -24,6 +26,7 @@ namespace BattleASP.Models
 
         public static List<Weapon> Weapons(string file)
         {
+            file = HostingEnvironment.MapPath(file);
             var weapons = new List<Weapon>();
             if (File.Exists(file))
             {
@@ -37,6 +40,7 @@ namespace BattleASP.Models
 
         public static List<Monster> Monsters(string file)
         {
+            file = HostingEnvironment.MapPath(file);
             var monsters = new List<Monster>();
             if (File.Exists(file))
             {

@@ -1,0 +1,32 @@
+﻿@model BattleASP.Models.GameBattleModel
+
+@{
+    ViewBag.Title = "YouWon";
+}
+
+<h2>Battle Report</h2>
+
+<div>
+    @foreach (var item in Model.Report)
+    {
+        <p>
+            @Html.Display(item)
+        </p>
+    }
+</div>
+
+<h2>You Won!</h2>
+
+<div>
+    <h3>Your loot is @Html.Display(Model.Money.ToString()) gold and these items:</h3>
+    @foreach (var item in Model.Items)
+    {
+        <p>
+            @Html.DisplayFor(m => item.Name)
+        </p>
+    }
+</div>
+
+<p>
+    @Html.ActionLink("Back to the Tavern", "Tavern")
+</p>

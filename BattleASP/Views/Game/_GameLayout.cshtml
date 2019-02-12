@@ -1,0 +1,119 @@
+﻿@model BattleASP.Models.Player
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Players", "Index", "Players", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
+                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div style="position: fixed; left: 0px; top: 50px;">
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayFor(model => model.Name)
+                </dt>
+                <dd>
+                    Stats
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Level)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Level)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Hp)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Hp)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Mp)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Mp)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Str)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Str)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Int)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Int)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Exp)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Exp)
+                </dd>
+                                
+                <dt>
+                    @Html.DisplayFor(model => model.Name) Weapon
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Weapon.Name)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Weapon.MinDamage)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Weapon.MinDamage)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Weapon.MaxDamage)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Weapon.MaxDamage)
+                </dd>
+
+                <dt>
+                    @Html.DisplayFor(model => model.Name) Money
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Money)
+                </dd>
+            </dl>
+        </div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

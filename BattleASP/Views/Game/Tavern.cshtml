@@ -1,0 +1,22 @@
+﻿@model BattleASP.Models.Player
+
+@{
+    ViewBag.Title = "Tavern";
+}
+
+@{
+    Layout = "~/Views/Game/_GameLayout.cshtml";
+}
+
+<h2>Tavern</h2>
+
+<h3>Welcome to the tavern, @Html.DisplayFor(m => Model.Name)</h3>
+
+<hr />
+<h4>What would you like to do</h4>
+<p>
+    @Html.ActionLink("Find an Adventure", "Adventure") |
+    @Html.ActionLink("Go to Shop", "Shop", new { id = Model.Id }) |
+    @Html.ActionLink("Change your Weapon", "Weapon", new { id = Model.Id }) |
+    @Html.ActionLink("End Game", "Index")
+</p>

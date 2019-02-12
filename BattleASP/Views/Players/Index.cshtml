@@ -64,10 +64,10 @@
 		<td>
 			@Html.DisplayFor(modelItem => item.Money)
 		</td>
-		<td>
-			@Html.ActionLink("Start Game", "Tavern", new { id = item.Id }) |
-			@Html.ActionLink("Delete", "Delete", new { id = item.Id })
-		</td>
+        <td>
+            @Html.ActionLink("Start Game", "StartGame", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
 	</tr>
 }
 

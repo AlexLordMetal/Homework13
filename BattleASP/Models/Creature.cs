@@ -32,8 +32,7 @@ namespace BattleASP.Models
         public int Mp { get; set; }
         public int Str { get; set; }
         public int Int { get; set; }
-        public Weapon Weapon { get; set; }
-        public virtual List<Item> ItemsInventory { get; set; }
-        public virtual List<Weapon> WeaponsInventory { get; set; }
+        public virtual Weapon Weapon { get; set; }
+        public virtual List<Item> Items { get; set; }
     }
 }
